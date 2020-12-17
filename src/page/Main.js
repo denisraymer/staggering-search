@@ -1,8 +1,12 @@
 import React from 'react';
-import {Col, Container, Row, Table} from 'react-bootstrap';
+import {Col, Container, Row, Spinner} from 'react-bootstrap';
 import SearchForm from '../components/SearchForm';
+import fetchUsers from '../api/fetchUsers';
+import ListUsers from '../components/ListUsers/ListUsers';
 
 function Main() {
+    const {response} = fetchUsers('/users');
+
     return (
         <Container>
             <Row>
@@ -12,25 +16,8 @@ function Main() {
                 </Col>
                 <Col xl={12}>
                     <br/>
-                    <h4>Search results</h4>
-                    <Table striped bordered hover>
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        </tbody>
-                    </Table>
+                    <h4>List of users</h4>
+                    {response.length ? <ListUsers data={response}/> : <Spinner animation='border'/>}
                 </Col>
             </Row>
         </Container>
