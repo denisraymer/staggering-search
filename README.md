@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/denisraimer/staggering-search">
-    <img src="https://raw.githubusercontent.com/denisraymer/staggering-search/3219d2e7ce954646ce282e76bf540d13746022b2/src/assets/images/logo.svg" alt="Logo" width="300" height="80">
+    <img src="https://raw.githubusercontent.com/denisraymer/staggering-search/3219d2e7ce954646ce282e76bf540d13746022b2/src/assets/images/logo.svg" alt="Logo" width="350">
   </a>
 
   <p align="center">
