@@ -3,7 +3,7 @@ import {Table} from 'react-bootstrap';
 import ListUsersItem from './ListUsersItem';
 
 function ListUsers(props) {
-    const {data} = props;
+    const {listUsers} = props;
 
     return (
         <Table striped bordered hover size="sm">
@@ -17,7 +17,7 @@ function ListUsers(props) {
             </tr>
             </thead>
             <tbody>
-            {data.map(item => <ListUsersItem login={item.login}/>)}
+            {listUsers.map(item => <ListUsersItem login={item.login}/>)}
             </tbody>
         </Table>
     )
