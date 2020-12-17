@@ -3,8 +3,9 @@ import {useEffect, useState} from 'react';
 
 export default url => {
     const baseUrl = 'https://api.github.com';
-    const [response, setResponse] = useState([]);
-    const [error, setError] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [response, setResponse] = useState(null);
+    const [error, setError] = useState(null);
     const githubToken = 'db0c8e0580656c7465bc9529a3c3947dd5a7a185';
 
     useEffect(function () {
@@ -15,10 +16,12 @@ export default url => {
             }
         }).then(function (result) {
             setResponse(result.data);
+            setIsLoading(prevState => !prevState);
         }).catch(function (error) {
             setError(error.response.data);
+            setIsLoading(prevState => !prevState);
         });
     }, []);
 
-    return {response, error};
+    return {isLoading, response, error};
 }

@@ -5,7 +5,7 @@ import fetchUsers from '../api/fetchUsers';
 import ListUsers from '../components/ListUsers/ListUsers';
 
 function Main() {
-    const {response} = fetchUsers('/users');
+    const {isLoading, response} = fetchUsers('/users');
 
     return (
         <Container>
@@ -17,7 +17,7 @@ function Main() {
                 <Col xl={12}>
                     <br/>
                     <h4>List of users</h4>
-                    {response.length ? <ListUsers data={response}/> : <Spinner animation='border'/>}
+                    {isLoading ? <Spinner animation='border'/> : <ListUsers listUsers={response}/>}
                 </Col>
             </Row>
         </Container>
