@@ -15,7 +15,7 @@ function ListUsers(props) {
                     <th width='200px'>First name</th>
                     <th width='500px'>Login</th>
                     <th>Location</th>
-                    <th/>
+                    <th width='100px'/>
                 </tr>
                 </thead>
                 <tbody>
