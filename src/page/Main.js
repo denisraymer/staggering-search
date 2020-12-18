@@ -16,7 +16,6 @@ function Main() {
                 </Col>
                 <Col xl={12}>
                     <br/>
-                    <h4>List of users</h4>
                     {isLoading ? <Spinner animation='border'/> : <ListUsers listUsers={response}/>}
                 </Col>
             </Row>

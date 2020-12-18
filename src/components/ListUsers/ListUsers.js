@@ -6,20 +6,23 @@ function ListUsers(props) {
     const {listUsers} = props;
 
     return (
-        <Table striped bordered hover size="sm">
-            <thead>
-            <tr>
-                <th width='70px'/>
-                <th width='200px'>First name</th>
-                <th width='500px'>Login</th>
-                <th>Location</th>
-                <th/>
-            </tr>
-            </thead>
-            <tbody>
-            {listUsers.map(item => <ListUsersItem login={item.login}/>)}
-            </tbody>
-        </Table>
+        <React.Fragment>
+            <h4>List of users</h4>
+            <Table striped bordered hover size="sm">
+                <thead>
+                <tr>
+                    <th width='70px'/>
+                    <th width='200px'>First name</th>
+                    <th width='500px'>Login</th>
+                    <th>Location</th>
+                    <th/>
+                </tr>
+                </thead>
+                <tbody>
+                {listUsers.map(item => <ListUsersItem login={item.login}/>)}
+                </tbody>
+            </Table>
+        </React.Fragment>
     )
 }
 

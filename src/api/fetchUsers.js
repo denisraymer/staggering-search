@@ -6,7 +6,7 @@ export default url => {
     const [isLoading, setIsLoading] = useState(true);
     const [response, setResponse] = useState(null);
     const [error, setError] = useState(null);
-    const githubToken = 'db0c8e0580656c7465bc9529a3c3947dd5a7a185';
+    const githubToken = 'ebc79668cfbb8fe0db1ec7c3e1cc8ccce0120690';
 
     useEffect(function () {
         axios.get(baseUrl + url, {

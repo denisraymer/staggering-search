@@ -1,12 +1,12 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/denisraimer/tax-deduction">
-    <h1 align="center">CITECH</h1>
+  <a href="https://denisraymer.github.io/staggering-search">
+    <img src="https://raw.githubusercontent.com/denisraymer/staggering-search/3219d2e7ce954646ce282e76bf540d13746022b2/src/assets/images/logo.svg" alt="Logo" width="350">
   </a>
 
   <p align="center">
-    Test work for Citech
+    We check the work with the GitHub API on our own skin
     <br />
     <br />
     <a href="https://denisraymer.github.io/staggering-search/">View Demo</a>
