@@ -3,23 +3,27 @@ import fetchUsers from '../api/fetchUsers';
 
 export default () => {
     const {isLoading, response} = fetchUsers('/users');
-    const [filteredUsers, setFilteredUsers] = useState([]);
-    const [inputSearch, setInputSearch] = useState('');
     const [users, setUsers] = useState([]);
+    const [filteredUsers, setFilteredUsers] = useState(null);
+    const [inputSearch, setInputSearch] = useState('');
 
-    const search = (event) => setInputSearch(event.target.value);
+    const searchUsers = (event) => setInputSearch(event.target.value);
 
     useEffect(function () {
         if (response !== null) setUsers(response);
     }, [isLoading]);
 
     useEffect(() => {
-        if (filteredUsers.length) {
-            setFilteredUsers(users.filter((user) => user.login.toLowerCase().includes(inputSearch.toLowerCase())));
-        } else {
-            setFilteredUsers(users);
+        if (filteredUsers === null) {
+
+            setFilteredUsers([
+                ...users.filter((user) => {
+                    return user.login
+                })
+            ]);
         }
+
     }, [inputSearch, users]);
 
-    return [{inputSearch, filteredUsers}, search];
+    return [{inputSearch, filteredUsers}, searchUsers];
 };

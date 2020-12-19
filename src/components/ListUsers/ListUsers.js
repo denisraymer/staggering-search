@@ -19,7 +19,7 @@ function ListUsers(props) {
                 </tr>
                 </thead>
                 <tbody>
-                {listUsers.map(item => <ListUsersItem login={item.login}/>)}
+                {/*{listUsers !== null ? listUsers.map(item => <ListUsersItem login={item.login}/>) : null}*/}
                 </tbody>
             </Table>
         </React.Fragment>

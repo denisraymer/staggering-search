@@ -1,8 +1,6 @@
 import React from 'react';
 import {Col, Container, Row, Spinner} from 'react-bootstrap';
 import SearchForm from '../components/SearchForm';
-import fetchUsers from '../api/fetchUsers';
-import ListUsers from '../components/ListUsers/ListUsers';
 import useSearch from '../hooks/useSearch';
 
 function Main() {
@@ -17,7 +15,7 @@ function Main() {
                 </Col>
                 <Col xl={12}>
                     <br/>
-                    {filteredUsers.length === 0 ? <Spinner animation='border'/> : <ListUsers listUsers={filteredUsers}/>}
+                    {/*{filteredUsers === null ? <Spinner animation='border'/> : <ListUsers listUsers={filteredUsers}/>}*/}
                 </Col>
             </Row>
         </Container>
