@@ -2,9 +2,7 @@ import React from 'react';
 import {Table} from 'react-bootstrap';
 import ListUsersItem from './ListUsersItem';
 
-function ListUsers(props) {
-    const {listUsers} = props;
-
+function ListUsers({userData}) {
     return (
         <React.Fragment>
             <h4>List of users</h4>
@@ -19,7 +17,7 @@ function ListUsers(props) {
                 </tr>
                 </thead>
                 <tbody>
-                {/*{listUsers !== null ? listUsers.map(item => <ListUsersItem login={item.login}/>) : null}*/}
+                {userData.map(user => <ListUsersItem user={user}/>)}
                 </tbody>
             </Table>
         </React.Fragment>

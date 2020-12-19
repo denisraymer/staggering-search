@@ -1,12 +1,10 @@
 import React from 'react';
 import {Form} from 'react-bootstrap';
 
-function SearchForm(props) {
-    const {inputSearch, search} = props;
-
+function SearchForm() {
     return (
         <React.Fragment>
-            <Form.Control type='text' placeholder='Search' value={inputSearch} onChange={event => search(event)}/>
+            <Form.Control type='text' placeholder='Search'/>
         </React.Fragment>
     )
 }

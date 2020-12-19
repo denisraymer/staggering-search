@@ -1,21 +1,20 @@
 import React from 'react';
 import {Col, Container, Row, Spinner} from 'react-bootstrap';
 import SearchForm from '../components/SearchForm';
-import useSearch from '../hooks/useSearch';
+import useGetUserData from '../hooks/useGetUserData';
+import ListUsers from '../components/ListUsers/ListUsers';
 
 function Main() {
-    const [{inputSearch, filteredUsers}, search] = useSearch();
+    const {isLoading, userData} = useGetUserData();
 
     return (
         <Container>
             <Row>
                 <Col xl={12}>
-                    <br/>
-                    <SearchForm inputSearch={inputSearch} search={search}/>
+                    <SearchForm/>
                 </Col>
                 <Col xl={12}>
-                    <br/>
-                    {/*{filteredUsers === null ? <Spinner animation='border'/> : <ListUsers listUsers={filteredUsers}/>}*/}
+                    {isLoading ? <Spinner animation='border'/> : <ListUsers userData={userData}/>}
                 </Col>
             </Row>
         </Container>
