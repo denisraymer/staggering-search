@@ -110,3 +110,15 @@
     margin-bottom: 15px;
   }
 }
+
+.footer {
+  text-align: center;
+  margin: 20px 0 30px;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

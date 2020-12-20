@@ -17,6 +17,13 @@ function Main() {
                     </Col>
                 </Row>
             </Container>
+            <Container>
+                <Row>
+                    <Col xl={12}>
+                        <div className='footer'>КБ D.Raymer</div>
+                    </Col>
+                </Row>
+            </Container>
         </ListUsersProvider>
     )
 }
