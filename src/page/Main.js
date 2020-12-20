@@ -1,5 +1,5 @@
 import React from 'react';
-import {Col, Container, Row, Spinner} from 'react-bootstrap';
+import {Col, Container, Row} from 'react-bootstrap';
 import SearchForm from '../components/SearchForm';
 import ListUsersProvider from '../components/ListUsers/ListUsersContext';
 import ListUsers from '../components/ListUsers/ListUsers';
