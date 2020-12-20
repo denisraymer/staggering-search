@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/staggering-search/static/css/main.8e4378f2.chunk.css",
-    "main.js": "/staggering-search/static/js/main.44dd5726.chunk.js",
-    "main.js.map": "/staggering-search/static/js/main.44dd5726.chunk.js.map",
+    "main.js": "/staggering-search/static/js/main.b1b53c19.chunk.js",
+    "main.js.map": "/staggering-search/static/js/main.b1b53c19.chunk.js.map",
     "runtime-main.js": "/staggering-search/static/js/runtime-main.263b0261.js",
     "runtime-main.js.map": "/staggering-search/static/js/runtime-main.263b0261.js.map",
     "static/css/2.ef81b4f3.chunk.css": "/staggering-search/static/css/2.ef81b4f3.chunk.css",
@@ -19,6 +19,6 @@
     "static/css/2.ef81b4f3.chunk.css",
     "static/js/2.b97a8f05.chunk.js",
     "static/css/main.8e4378f2.chunk.css",
-    "static/js/main.44dd5726.chunk.js"
+    "static/js/main.b1b53c19.chunk.js"
   ]
 }
