@@ -16,7 +16,7 @@ export default function ListUsers() {
                 <tr>
                     <th width='70px'/>
                     <th width='200px'>First name</th>
-                    <th width='500px'>Login</th>
+                    <th width='540px'>Login</th>
                     <th>Location</th>
                     <th width='100px'/>
                 </tr>

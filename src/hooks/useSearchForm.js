@@ -4,7 +4,7 @@ const useSearchForm = () => {
     const [inputValueSearch, setInputValueSearch] = useState('');
 
     function search(event) {
-        setInputValueSearch(event.target.value.toLowerCase());
+        setInputValueSearch(event.target.value);
     }
 
     return {inputValueSearch, search};

@@ -3,7 +3,7 @@ import axios from 'axios';
 const getUsers = (url, setData, setError) => {
     axios.get(`https://api.github.com/${url}`, {
         headers: {
-            Authorization: `Bearer ebc79668cfbb8fe0db1ec7c3e1cc8ccce0120690`,
+            Authorization: `Bearer 6c8135e53970dc85362f400935c8af46a202ba42`,
             'Content-Type': 'application/json'
         }
     }).then(function (result) {

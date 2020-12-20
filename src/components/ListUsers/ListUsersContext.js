@@ -9,11 +9,15 @@ export default function ListUsersProvider({children}) {
     const {inputValueSearch, search} = useSearchForm();
     const [thisData, setThisData] = useState([]);
 
+    function searchUser(user, value) {
+        return user.toLowerCase().includes(value.toLowerCase().trim());
+    }
+
     useEffect(function () {
         if (inputValueSearch !== '') {
-            const result = thisData.filter((user) => {
-                if (user.login !== null && user.name !== null) {
-                    return user.login.toLowerCase().includes(inputValueSearch) || user.name.toLowerCase().includes(inputValueSearch);
+            const result = userData.filter((user) => {
+                if (user.login !== null || user.name !== null) {
+                    return searchUser(user.login, inputValueSearch) || searchUser(user.name, inputValueSearch);
                 }
             });
             setThisData([...result]);
