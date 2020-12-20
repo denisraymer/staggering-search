@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/staggering-search/static/css/main.8e4378f2.chunk.css",
+    "main.js": "/staggering-search/static/js/main.a960fd12.chunk.js",
+    "main.js.map": "/staggering-search/static/js/main.a960fd12.chunk.js.map",
+    "runtime-main.js": "/staggering-search/static/js/runtime-main.263b0261.js",
+    "runtime-main.js.map": "/staggering-search/static/js/runtime-main.263b0261.js.map",
+    "static/css/2.ef81b4f3.chunk.css": "/staggering-search/static/css/2.ef81b4f3.chunk.css",
+    "static/js/2.b97a8f05.chunk.js": "/staggering-search/static/js/2.b97a8f05.chunk.js",
+    "static/js/2.b97a8f05.chunk.js.map": "/staggering-search/static/js/2.b97a8f05.chunk.js.map",
+    "index.html": "/staggering-search/index.html",
+    "static/css/2.ef81b4f3.chunk.css.map": "/staggering-search/static/css/2.ef81b4f3.chunk.css.map",
+    "static/css/main.8e4378f2.chunk.css.map": "/staggering-search/static/css/main.8e4378f2.chunk.css.map",
+    "static/js/2.b97a8f05.chunk.js.LICENSE.txt": "/staggering-search/static/js/2.b97a8f05.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/staggering-search/static/media/icon-close.beb7d290.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.263b0261.js",
+    "static/css/2.ef81b4f3.chunk.css",
+    "static/js/2.b97a8f05.chunk.js",
+    "static/css/main.8e4378f2.chunk.css",
+    "static/js/main.a960fd12.chunk.js"
+  ]
+}
