@@ -12,7 +12,7 @@ const useGetUserData = () => {
     }, []);
 
     useEffect(function () {
-        if (response !== null) {
+        if (isLoading && response !== null) {
             function getUser(data) {
                 return setUserData(prevState => [...prevState, data]);
             }
@@ -21,10 +21,9 @@ const useGetUserData = () => {
 
             setIsLoading(false);
         }
-
     }, [response]);
 
-    return {userData, isLoading, error};
+    return [{userData, isLoading, error}];
 };
 
 export default useGetUserData;

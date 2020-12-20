@@ -5,7 +5,7 @@ import useGetUserData from '../hooks/useGetUserData';
 import ListUsers from '../components/ListUsers/ListUsers';
 
 function Main() {
-    const {isLoading, userData} = useGetUserData();
+    const [{isLoading, userData}] = useGetUserData();
 
     return (
         <Container>
