@@ -1,10 +1,9 @@
 import React from 'react';
 import {Form} from 'react-bootstrap';
-import useSearchForm from '../hooks/useSearchForm';
 import {useListUsers} from './ListUsers/ListUsersContext';
 
 function SearchForm() {
-    const {inputValueSearch, search} = useSearchForm(useListUsers());
+    const {inputValueSearch, search} = useListUsers();
 
     return (
         <React.Fragment>
