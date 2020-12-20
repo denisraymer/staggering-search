@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import App from './containers/App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/assets/styles/main.scss';
+import ErrorBoundary from './containers/ErrorBoundary';
 
 ReactDOM.render(
-    <React.StrictMode>
+    <ErrorBoundary>
         <App/>
-    </React.StrictMode>,
+    </ErrorBoundary>,
     document.getElementById('root')
 );

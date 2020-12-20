@@ -84,3 +84,29 @@
 .form-control {
   margin: 30px 0;
 }
+
+.not-found {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+  }
+
+  &__link {
+    color: #1a2735;
+  }
+
+  .number {
+    font-size: 80px;
+    letter-spacing: 0;
+    margin-bottom: 15px;
+  }
+}
