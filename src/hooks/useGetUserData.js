@@ -21,7 +21,7 @@ const useGetUserData = () => {
 
             setIsLoading(false);
         }
-    }, [response]);
+    }, [isLoading, response]);
 
     return [{userData, isLoading, error}];
 };

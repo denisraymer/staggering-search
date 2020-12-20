@@ -1,8 +1,13 @@
 import React from 'react';
-import {Table} from 'react-bootstrap';
+import {Spinner, Table} from 'react-bootstrap';
 import ListUsersItem from './ListUsersItem';
+import {useListUsers} from './ListUsersContext';
 
-function ListUsers({userData}) {
+export default function ListUsers() {
+    const {userData, isLoading} = useListUsers();
+
+    if (isLoading) return <Spinner animation='border'/>;
+
     return (
         <React.Fragment>
             <h4>List of users</h4>
@@ -23,5 +28,3 @@ function ListUsers({userData}) {
         </React.Fragment>
     )
 }
-
-export default ListUsers

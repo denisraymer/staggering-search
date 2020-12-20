@@ -1,10 +1,12 @@
-import {useState} from 'react';
+import {useContext, useState} from 'react';
+// import {ListUsersContext} from '../page/Main';
 
-const useSearchForm = () => {
+const useSearchForm = (props) => {
     const [inputValueSearch, setInputValueSearch] = useState('');
+    // const userData = useContext(ListUsersContext);
 
     function search(event) {
-        setInputValueSearch(event.target.value);
+        setInputValueSearch(event.target.value.toLowerCase());
     }
 
     return {inputValueSearch, search};
