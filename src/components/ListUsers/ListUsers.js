@@ -6,7 +6,7 @@ import {useListUsers} from './ListUsersContext';
 export default function ListUsers() {
     const {userData, isLoading} = useListUsers();
 
-    if (isLoading) return <Spinner animation='border'/>;
+    if (isLoading) return <Spinner animation='border'/>
 
     return (
         <React.Fragment>
