@@ -1,26 +1,30 @@
 import React from 'react';
-import {Table} from 'react-bootstrap';
+import {Spinner, Table} from 'react-bootstrap';
 import ListUsersItem from './ListUsersItem';
+import {useListUsers} from './ListUsersContext';
 
-function ListUsers(props) {
-    const {listUsers} = props;
+export default function ListUsers() {
+    const {userData, isLoading} = useListUsers();
+
+    if (isLoading) return <Spinner animation='border'/>
 
     return (
-        <Table striped bordered hover size="sm">
-            <thead>
-            <tr>
-                <th width='70px'/>
-                <th width='200px'>First name</th>
-                <th width='500px'>Login</th>
-                <th>Location</th>
-                <th/>
-            </tr>
-            </thead>
-            <tbody>
-            {listUsers.map(item => <ListUsersItem login={item.login}/>)}
-            </tbody>
-        </Table>
+        <React.Fragment>
+            <h4>List of users</h4>
+            <Table striped bordered hover size="sm">
+                <thead>
+                <tr>
+                    <th width='70px'/>
+                    <th width='200px'>First name</th>
+                    <th width='540px'>Login</th>
+                    <th>Location</th>
+                    <th width='100px'/>
+                </tr>
+                </thead>
+                <tbody>
+                {userData.map(user => <ListUsersItem user={user}/>)}
+                </tbody>
+            </Table>
+        </React.Fragment>
     )
 }
-
-export default ListUsers

@@ -3,17 +3,16 @@ import {Button, ListGroup, Modal} from 'react-bootstrap';
 import 'rodal/lib/rodal.css';
 import Rodal from 'rodal';
 
-function UserModal(props) {
-    const {user} = props;
+function UserModal({user}) {
     const [modalVisible, setModalVisible] = useState(false);
 
-    const isShow = () => setModalVisible(prevState => !prevState);
+    const isShowModal = () => setModalVisible(prevState => !prevState);
 
     return (
         <React.Fragment>
-            <Button variant="light" onClick={isShow}>More</Button>
+            <Button variant="light" onClick={isShowModal}>More</Button>
 
-            <Rodal visible={modalVisible} onClose={isShow}>
+            <Rodal visible={modalVisible} onClose={isShowModal}>
                 <div className='modal-content'>
                     <Modal.Header>
                         <Modal.Title>{user.name}</Modal.Title>

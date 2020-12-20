@@ -1,26 +1,23 @@
 import React from 'react';
 import {Col, Container, Row, Spinner} from 'react-bootstrap';
 import SearchForm from '../components/SearchForm';
-import fetchUsers from '../api/fetchUsers';
+import ListUsersProvider from '../components/ListUsers/ListUsersContext';
 import ListUsers from '../components/ListUsers/ListUsers';
 
 function Main() {
-    const {isLoading, response} = fetchUsers('/users');
-
     return (
-        <Container>
-            <Row>
-                <Col xl={12}>
-                    <br/>
-                    <SearchForm/>
-                </Col>
-                <Col xl={12}>
-                    <br/>
-                    <h4>List of users</h4>
-                    {isLoading ? <Spinner animation='border'/> : <ListUsers listUsers={response}/>}
-                </Col>
-            </Row>
-        </Container>
+        <ListUsersProvider>
+            <Container>
+                <Row>
+                    <Col xl={12}>
+                        <SearchForm/>
+                    </Col>
+                    <Col xl={12}>
+                        <ListUsers/>
+                    </Col>
+                </Row>
+            </Container>
+        </ListUsersProvider>
     )
 }
 
