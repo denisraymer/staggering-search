@@ -9,18 +9,21 @@ export default function ListUsersProvider({children}) {
     const {inputValueSearch, search} = useSearchForm();
     const [thisData, setThisData] = useState([]);
 
-    function searchUser(user, value) {
+    function validate(user, value) {
         return user.toLowerCase().includes(value.toLowerCase().trim());
+    }
+
+    function searchUsers(userData) {
+        return userData.filter((user) => {
+            if (user.login !== null && user.name !== null && user.location !== null) {
+                return validate(user.login, inputValueSearch) || validate(user.name, inputValueSearch) || validate(user.location, inputValueSearch);
+            }
+        });
     }
 
     useEffect(function () {
         if (inputValueSearch !== '') {
-            const result = userData.filter((user) => {
-                if (user.login !== null && user.name !== null && user.location !== null) {
-                    return searchUser(user.login, inputValueSearch) || searchUser(user.name, inputValueSearch) || searchUser(user.location, inputValueSearch);
-                }
-            });
-            setThisData([...result]);
+            setThisData([...searchUsers(userData)]);
         } else {
             setThisData([...userData]);
         }
