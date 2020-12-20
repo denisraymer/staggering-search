@@ -16,8 +16,8 @@ export default function ListUsersProvider({children}) {
     useEffect(function () {
         if (inputValueSearch !== '') {
             const result = userData.filter((user) => {
-                if (user.login !== null || user.name !== null) {
-                    return searchUser(user.login, inputValueSearch) || searchUser(user.name, inputValueSearch);
+                if (user.login !== null && user.name !== null && user.location !== null) {
+                    return searchUser(user.login, inputValueSearch) || searchUser(user.name, inputValueSearch) || searchUser(user.location, inputValueSearch);
                 }
             });
             setThisData([...result]);
