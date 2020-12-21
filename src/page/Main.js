@@ -20,7 +20,7 @@ function Main() {
             <Container>
                 <Row>
                     <Col xl={12}>
-                        <div className='footer'>КБ D.Raymer V 0.1.0</div>
+                        <div className='footer'>КБ D.Raymer V0.1.0</div>
                     </Col>
                 </Row>
             </Container>
